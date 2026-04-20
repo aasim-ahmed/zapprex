@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* ── Tailwind v4 theme: custom fonts ──────────────────────── */
+@theme {
+  --font-sans:    'DM Sans', sans-serif;
+  --font-display: 'Syne', sans-serif;
+}
+
+/* ── Project styles ───────────────────────────────────────── */
+@import './styles/globals.css';
+@import './styles/animations.css';
