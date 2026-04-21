@@ -131,9 +131,20 @@ export default function Hero() {
           </Badge>
         </motion.div>
 
-        {/* Heading */}
+        {/* SEO Company Name */}
         <motion.h1
           custom={1}
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          className="text-xs sm:text-sm font-medium tracking-[0.15em] text-slate-400 uppercase mb-4 opacity-80"
+        >
+          Zapprex Technologies Private Limited
+        </motion.h1>
+
+        {/* Heading */}
+        <motion.h2
+          custom={2}
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -142,11 +153,11 @@ export default function Hero() {
         >
           <span className="text-white">We build digital products that drive </span>
           <span className="shimmer-text">real business growth.</span>
-        </motion.h1>
+        </motion.h2>
 
         {/* Sub-headline */}
         <motion.p
-          custom={2}
+          custom={3}
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -157,7 +168,7 @@ export default function Hero() {
 
         {/* CTAs */}
         <motion.div
-          custom={3}
+          custom={4}
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -196,7 +207,7 @@ export default function Hero() {
 
         {/* Counter stats */}
         <motion.div
-          custom={4}
+          custom={5}
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -219,7 +230,7 @@ export default function Hero() {
 
         {/* Tech stack marquee */}
         <motion.div
-          custom={5}
+          custom={6}
           variants={fadeUp}
           initial="hidden"
           animate="visible"

@@ -11,7 +11,7 @@ export const NAV_LINKS = [
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Services',     href: '#services'     },
   { label: 'Pricing',      href: '#pricing'      },
-  { label: 'About',        href: '#about'        },
+  // { label: 'About',        href: '#about'        },
 ]
 
 export const STATS = [
