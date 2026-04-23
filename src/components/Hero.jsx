@@ -187,7 +187,7 @@ export default function Hero() {
             Get a Quote
           </motion.a>
           
-          <motion.a
+          {/* <motion.a
             href="#portfolio"
             onClick={(e) => {
               e.preventDefault();
@@ -202,7 +202,7 @@ export default function Hero() {
             }}
           >
             View Our Work
-          </motion.a>
+          </motion.a> */}
         </motion.div>
 
         {/* Counter stats */}
