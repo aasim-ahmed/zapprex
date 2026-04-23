@@ -2,7 +2,7 @@
 
 export const SITE_NAME    = 'Zapprex Technologies Private Limited'
 export const SITE_EMAIL   = 'info@zapprex.com'
-export const SITE_TAGLINE = 'Building the Future of Technology.'
+export const SITE_TAGLINE = 'IT Solutions Company'
 
 export const EMAIL_REGEX = /^[A-Z0-9._%+\-]+@[A-Z0-9.\-]+\.[A-Z]{2,}$/i
 
