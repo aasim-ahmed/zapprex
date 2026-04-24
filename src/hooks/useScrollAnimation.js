@@ -56,14 +56,14 @@ export const viewport = { once: true, amount: 0.15 }
 export const viewportCenter = { once: true, amount: 0.35 }
 
 export const heroLoadingFadeUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 20 }, // Reduced y offset from 40 to 20 for mobile performance
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.1, // Duration under 1.2s ensuring smooth feel
-      ease: [0.16, 1, 0.3, 1], // Premium specific ease mapping for elegant exit curvature
-      delay: i * 0.15, // Perfect stagger offset for heading -> text -> button
+      duration: 0.9, // Lower duration for a snappy premium mobile feel
+      ease: [0.16, 1, 0.3, 1],
+      delay: i * 0.12, // Faster stagger sequence
     },
   }),
 };

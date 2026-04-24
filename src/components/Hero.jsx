@@ -11,9 +11,9 @@ import Badge from '../ui/Badge'
 function MeshBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
-      {/* Primary top glow */}
+      {/* Primary top glow (hidden on mobile to save GPU) */}
       <div
-        className="absolute rounded-full float-orb"
+        className="absolute rounded-full float-orb hidden sm:block"
         style={{
           top: '-200px', left: '50%', transform: 'translateX(-50%)',
           width: '900px', height: '900px',
@@ -24,18 +24,18 @@ function MeshBackground() {
       />
       {/* Cyan right glow */}
       <div
-        className="absolute rounded-full"
+        className="absolute rounded-full opacity-40 sm:opacity-100"
         style={{
           top: '80px', right: '-60px',
           width: '480px', height: '480px',
           background: 'radial-gradient(circle at 50% 50%, rgba(34,211,238,0.11) 0%, transparent 70%)',
-          filter: 'blur(50px)',
+          filter: 'blur(30px)', // Reduced blur for better mobile performance
           animation: 'mesh-drift-2 11s ease-in-out infinite',
         }}
       />
       {/* Violet left glow */}
       <div
-        className="absolute rounded-full"
+        className="absolute rounded-full hidden sm:block"
         style={{
           top: '120px', left: '-80px',
           width: '380px', height: '380px',
@@ -125,7 +125,14 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center">
 
         {/* Badge */}
-        <motion.div custom={0} variants={heroLoadingFadeUp} initial="hidden" animate="visible">
+        <motion.div 
+          custom={0} 
+          variants={heroLoadingFadeUp} 
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true, amount: 0.1 }}
+          style={{ willChange: 'transform, opacity' }}
+        >
           <Badge dot variant="indigo" className="mb-8">
             Now Accepting New Clients
           </Badge>
@@ -136,7 +143,9 @@ export default function Hero() {
           custom={1}
           variants={heroLoadingFadeUp}
           initial="hidden"
-          animate="visible"
+          whileInView="visible" 
+          viewport={{ once: true, amount: 0.1 }}
+          style={{ willChange: 'transform, opacity' }}
           className="text-xs sm:text-sm font-medium tracking-[0.15em] text-slate-400 uppercase mb-4 opacity-80"
         >
           Zapprex Technologies Private Limited
@@ -147,9 +156,10 @@ export default function Hero() {
           custom={2}
           variants={heroLoadingFadeUp}
           initial="hidden"
-          animate="visible"
+          whileInView="visible" 
+          viewport={{ once: true, amount: 0.1 }}
+          style={{ willChange: 'transform, opacity', letterSpacing: '-0.035em' }}
           className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold leading-[1.06] mb-6"
-          style={{ letterSpacing: '-0.035em' }}
         >
           <span className="text-white">We build digital products that drive </span>
           <span className="shimmer-text">real business growth.</span>
@@ -160,7 +170,9 @@ export default function Hero() {
           custom={3}
           variants={heroLoadingFadeUp}
           initial="hidden"
-          animate="visible"
+          whileInView="visible" 
+          viewport={{ once: true, amount: 0.1 }}
+          style={{ willChange: 'transform, opacity' }}
           className="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto mb-12"
         >
           From MVPs to enterprise platforms — Zapprex turns ambitious ideas into scalable products that increase revenue and user engagement.
@@ -171,7 +183,9 @@ export default function Hero() {
           custom={4}
           variants={heroLoadingFadeUp}
           initial="hidden"
-          animate="visible"
+          whileInView="visible" 
+          viewport={{ once: true, amount: 0.1 }}
+          style={{ willChange: 'transform, opacity' }}
           className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full px-4 sm:px-0 mb-20"
         >
           <motion.a
@@ -186,23 +200,6 @@ export default function Hero() {
           >
             Get a Quote
           </motion.a>
-          
-          {/* <motion.a
-            href="#portfolio"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }}
-            whileHover={{ scale: 1.05, background: 'rgba(255,255,255,0.06)' }}
-            whileTap={{ scale: 0.96 }}
-            className="flex items-center justify-center text-slate-200 hover:text-white text-[15px] font-bold px-8 py-3.5 rounded-full transition-colors duration-300"
-            style={{
-              background: 'rgba(255,255,255,0.02)',
-              border: '1px solid rgba(255,255,255,0.12)',
-            }}
-          >
-            View Our Work
-          </motion.a> */}
         </motion.div>
 
         {/* Counter stats */}
@@ -210,7 +207,9 @@ export default function Hero() {
           custom={5}
           variants={heroLoadingFadeUp}
           initial="hidden"
-          animate="visible"
+          whileInView="visible" 
+          viewport={{ once: true, amount: 0.1 }}
+          style={{ willChange: 'transform, opacity' }}
           className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10 lg:gap-20 w-full max-w-3xl mx-auto mb-16"
         >
           {STATS.map(({ value, suffix, label, decimal }) => (
@@ -233,7 +232,9 @@ export default function Hero() {
           custom={6}
           variants={heroLoadingFadeUp}
           initial="hidden"
-          animate="visible"
+          whileInView="visible" 
+          viewport={{ once: true, amount: 0.1 }}
+          style={{ willChange: 'transform, opacity' }}
           className="w-full"
         >
           <p className="text-slate-600 text-xs font-medium tracking-widest uppercase mb-4">
