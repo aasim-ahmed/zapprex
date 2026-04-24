@@ -6,7 +6,7 @@ export default function FloatingContact() {
 
   // Example phone numbers — replace with actual
   const phoneNumber = "8989977895"; 
-  const whatsappLink = "https://wa.me/8989977895";
+  const whatsappLink = "https://wa.me/918989977895";
 
   const actionVariants = {
     hidden: { opacity: 0, y: 15, scale: 0.8 },
