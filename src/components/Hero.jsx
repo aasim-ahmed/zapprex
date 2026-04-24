@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { fadeUp } from '../hooks/useScrollAnimation'
+import { heroLoadingFadeUp } from '../hooks/useScrollAnimation'
 import { STATS, SITE_EMAIL } from '../constants'
 import { techStack } from '../data/techStack'
 import Badge from '../ui/Badge'
@@ -125,7 +125,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center">
 
         {/* Badge */}
-        <motion.div custom={0} variants={fadeUp} initial="hidden" animate="visible">
+        <motion.div custom={0} variants={heroLoadingFadeUp} initial="hidden" animate="visible">
           <Badge dot variant="indigo" className="mb-8">
             Now Accepting New Clients
           </Badge>
@@ -134,7 +134,7 @@ export default function Hero() {
         {/* SEO Company Name */}
         <motion.h1
           custom={1}
-          variants={fadeUp}
+          variants={heroLoadingFadeUp}
           initial="hidden"
           animate="visible"
           className="text-xs sm:text-sm font-medium tracking-[0.15em] text-slate-400 uppercase mb-4 opacity-80"
@@ -145,7 +145,7 @@ export default function Hero() {
         {/* Heading */}
         <motion.h2
           custom={2}
-          variants={fadeUp}
+          variants={heroLoadingFadeUp}
           initial="hidden"
           animate="visible"
           className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold leading-[1.06] mb-6"
@@ -158,7 +158,7 @@ export default function Hero() {
         {/* Sub-headline */}
         <motion.p
           custom={3}
-          variants={fadeUp}
+          variants={heroLoadingFadeUp}
           initial="hidden"
           animate="visible"
           className="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto mb-12"
@@ -169,7 +169,7 @@ export default function Hero() {
         {/* CTAs */}
         <motion.div
           custom={4}
-          variants={fadeUp}
+          variants={heroLoadingFadeUp}
           initial="hidden"
           animate="visible"
           className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full px-4 sm:px-0 mb-20"
@@ -208,7 +208,7 @@ export default function Hero() {
         {/* Counter stats */}
         <motion.div
           custom={5}
-          variants={fadeUp}
+          variants={heroLoadingFadeUp}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10 lg:gap-20 w-full max-w-3xl mx-auto mb-16"
@@ -231,7 +231,7 @@ export default function Hero() {
         {/* Tech stack marquee */}
         <motion.div
           custom={6}
-          variants={fadeUp}
+          variants={heroLoadingFadeUp}
           initial="hidden"
           animate="visible"
           className="w-full"

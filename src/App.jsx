@@ -8,6 +8,7 @@ import Pricing from './components/Pricing'
 import FAQ from './components/FAQ'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
+import FloatingContact from './components/FloatingContact'
 
 /* ─── Shared background layer ────────────────────────────── */
 function Background() {
@@ -92,9 +93,11 @@ export default function App() {
         <Divider />
 
         <FinalCTA />
+        
       </main>
 
       <Footer />
+      <FloatingContact />
     </div>
   )
 }

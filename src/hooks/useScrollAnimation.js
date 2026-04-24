@@ -54,3 +54,16 @@ export const scaleIn = {
 // Standard viewport config
 export const viewport = { once: true, amount: 0.15 }
 export const viewportCenter = { once: true, amount: 0.35 }
+
+export const heroLoadingFadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.1, // Duration under 1.2s ensuring smooth feel
+      ease: [0.16, 1, 0.3, 1], // Premium specific ease mapping for elegant exit curvature
+      delay: i * 0.15, // Perfect stagger offset for heading -> text -> button
+    },
+  }),
+};
