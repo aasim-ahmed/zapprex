@@ -4,42 +4,104 @@
 <head>
   <meta charset="UTF-8" />
 
-  <!-- ✅ FIXED FAVICON -->
+  <!-- FAVICON -->
   <link rel="icon" href="/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- PRIMARY SEO -->
-  <title>Zapprex Technologies Private Limited | IT Solutions Company</title>
+  <!-- SEO -->
+  <title>Zapprex Technologies | Web, App & AI Development Company for Startups</title>
 
   <meta name="description"
-    content="Zapprex Technologies Private Limited is a modern IT company delivering scalable web, mobile, cloud, and AI solutions for startups and enterprises. We build technology that drives real business growth." />
-
-  <!-- KEYWORDS (optional but helpful for new sites) -->
-  <meta name="keywords"
-    content="Zapprex, Zapprex Technologies, IT company India, software development, web development, mobile app development, AI solutions, cloud services, startup tech company" />
+    content="Build your startup product with Zapprex Technologies. We create scalable web, mobile, and AI solutions with fast MVP development and clean architecture." />
 
   <meta name="author" content="Zapprex Technologies Private Limited" />
 
-  <!-- OPEN GRAPH (VERY IMPORTANT) -->
+  <link rel="canonical" href="https://zapprex.com/" />
+
+  <!-- OPEN GRAPH -->
   <meta property="og:type" content="website" />
   <meta property="og:title"
-    content="Zapprex Technologies Private Limited | IT Solutions Company" />
+    content="Zapprex Technologies | Web, App & AI Development for Startups" />
   <meta property="og:description"
-    content="Innovative IT solutions for startups and businesses. Web, mobile, cloud & AI development that drives real growth." />
-  <meta property="og:url" content="https://zapprex.com" />
+    content="We help startups build scalable web, mobile, and AI products with fast MVP development and reliable delivery." />
+  <meta property="og:url" content="https://zapprex.com/" />
   <meta property="og:image" content="https://zapprex.com/og-image.jpg" />
 
   <!-- TWITTER -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title"
-    content="Zapprex Technologies Private Limited" />
+    content="Zapprex Technologies | Scalable Product Development for Startups" />
   <meta name="twitter:description"
-    content="Building scalable digital products with modern technologies." />
+    content="Build scalable web, mobile, and AI products with Zapprex Technologies." />
   <meta name="twitter:image" content="https://zapprex.com/og-image.jpg" />
+
+  <!-- SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://zapprex.com/#organization",
+        "name": "Zapprex Technologies Private Limited",
+        "url": "https://zapprex.com/",
+        "logo": "https://zapprex.com/logo.png",
+        "description": "Zapprex Technologies helps startups build scalable web, mobile, and AI products.",
+        "email": "info@zapprex.com",
+        "telephone": "+91-8989977895",
+        "sameAs": [
+          "https://www.linkedin.com/company/zapprex/",
+          "https://www.instagram.com/zapprex/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://zapprex.com/#website",
+        "url": "https://zapprex.com/",
+        "name": "Zapprex Technologies",
+        "publisher": {
+          "@id": "https://zapprex.com/#organization"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://zapprex.com/#localbusiness",
+        "name": "Zapprex Technologies Private Limited",
+        "image": "https://zapprex.com/logo.png",
+        "url": "https://zapprex.com/",
+        "telephone": "+91-8989977895",
+        "email": "info@zapprex.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "15 Naliya bakhal Ujjain",
+          "addressLocality": "Ujjain",
+          "addressRegion": "MP",
+          "postalCode": "456001",
+          "addressCountry": "IN"
+        },
+        "areaServed": "Worldwide",
+        "priceRange": "$$",
+        "openingHours": "Mo-Sa 09:00-18:00"
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Zapprex Technologies",
+        "url": "https://zapprex.com/",
+        "description": "Web, mobile, AI, and custom software development services for startups and businesses.",
+        "areaServed": "Worldwide",
+        "serviceType": [
+          "Web Development",
+          "Mobile App Development",
+          "AI Development",
+          "Custom Software Development"
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,12 +109,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
+
 </head>
 
 <body>
   <div id="root"></div>
 
-  <!-- Main Script -->
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
